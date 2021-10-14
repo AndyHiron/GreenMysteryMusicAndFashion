@@ -1,0 +1,122 @@
+import theme from 'styles/theme';
+import { hexToRgba } from 'services/style';
+
+export default {
+  container: (provided: any) => ({
+    ...provided,
+    width: '100%',
+  }),
+  control: (provided: any, state: any) => ({
+    ...provided,
+    minHeight: 48,
+    border: state.menuIsOpen
+      ? `1px solid ${theme.colors.green}`
+      : `1px solid ${hexToRgba(theme.colors.black, '10%')}`,
+    backgroundColor: `${theme.colors.white}`,
+    fontSize: 16,
+    boxShadow: 'none',
+    cursor: 'pointer',
+  }),
+  clearIndicator: (provided: any) => ({
+    ...provided,
+    fill: `${theme.colors.gray}`,
+    height: 20,
+    width: 20,
+    padding: 0,
+    marginRight: 20,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer',
+  }),
+  inidicatorsContainer: (provided: any) => ({
+    ...provided,
+    height: '100%',
+  }),
+  indicatorSeparator: () => ({
+    display: 'none',
+  }),
+  dropdownIndicator: (provided: any, state: any) => ({
+    ...provided,
+    fill: state.menuIsOpen ? `${theme.colors.green}` : `${theme.colors.gray}`,
+    marginRight: 20,
+    width: 20,
+    height: 20,
+    padding: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer',
+  }),
+  input: (provided: any) => ({
+    ...provided,
+    margin: '0 2px',
+  }),
+  placeholder: (provided: any) => ({
+    ...provided,
+    color: `${theme.colors.gray}`,
+  }),
+  menu: (provided: any) => ({
+    ...provided,
+    marginTop: 8,
+    padding: 8,
+    borderRadius: 4,
+    border: `1px solid ${hexToRgba(theme.colors.black, '10%')}`,
+    backgroundColor: `${theme.colors.white}`,
+    boxShadow: 'none',
+    boxSizing: 'border-box',
+  }),
+  multiValue: (provided: any) => ({
+    ...provided,
+    margin: '0 2px',
+    height: 32,
+    backgroundColor: `${theme.colors.green}`,
+    borderRadius: 4,
+    display: 'flex',
+    alignItems: 'center',
+  }),
+  multiValueLabel: (provided: any) => ({
+    ...provided,
+    padding: 0,
+    paddingLeft: 0,
+    maxWidth: 98,
+    margin: '0 8px',
+    color: `${theme.colors.white}`,
+    textOverflow: 'ellipsis',
+    textTransform: 'uppercase',
+    fontWeight: '500',
+    fontSize: 12,
+  }),
+  multiValueRemove: (provided: any) => ({
+    ...provided,
+    fill: `${theme.colors.white}`,
+    height: 16,
+    width: 16,
+    margin: '0 4px',
+    padding: 0,
+    '&:hover': {
+      backgroundColor: `${theme.colors.white}`,
+      fill: `${theme.colors.gray}`,
+    },
+    flexShrink: 0,
+    cursor: 'pointer',
+  }),
+  singleValue: (provided: any) => ({
+    ...provided,
+    color: `${theme.colors.black}`,
+  }),
+  option: (provided: any, state: any) => ({
+    ...provided,
+    minHeight: 32,
+    borderRadius: '4px',
+    color: state.isFocused ? `${theme.colors.white}` : `${theme.colors.black.light}`,
+    backgroundColor: state.isFocused ? theme.colors.green : 'transparent',
+    '&:hover': {
+      backgroundColor: `${theme.colors.green}`,
+      color: `${theme.colors.white}`,
+    },
+    display: 'flex',
+    alignItems: 'center',
+    cursor: 'pointer',
+  }),
+};
