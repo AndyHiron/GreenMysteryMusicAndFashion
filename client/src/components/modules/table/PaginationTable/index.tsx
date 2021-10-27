@@ -112,6 +112,8 @@ export const PaginationTable = <RowData extends object = {}> ({
                   page?.map((row: Row<RowData>) => {
                     prepareRow(row);
 
+                    console.log(row, 'cell')
+
                     return (
                       <PaginationTableRow
                         {...row.getRowProps()}

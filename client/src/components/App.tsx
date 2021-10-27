@@ -7,7 +7,11 @@ import 'react-toastify/dist/ReactToastify.min.css';
 import GlobalStyle from 'styles';
 
 const Dashboard = lazy(() => import('pages/Dashboard'));
-const UserManagement = lazy(() => import('pages/UserManagement'));
+const Summary = lazy(() => import('pages/Summary'));
+const WorkStatus = lazy(() => import('pages/WorkStatus'));
+const Deployment = lazy(() => import('pages/Deployment'));
+const Team = lazy(() => import('pages/Team'));
+
 const Login = lazy(() => import('pages/authentication/Login'));
 const ResetPassword = lazy(() => import('pages/authentication/ResetPassword'));
 const ConfirmPassword = lazy(() => import('pages/authentication/ConfirmPassword'));
@@ -27,7 +31,11 @@ const App: React.FC<RouteComponentProps> = () => (
     <Suspense fallback={<Loading position="absolute" />}>
       <Switch>
         <PrivateRoute path="/" component={Dashboard} exact />
-        <PrivateRoute path="/users" component={UserManagement} />
+        <PrivateRoute path="/project-summary" component={Summary} exact />
+        <PrivateRoute path="/work-status" component={WorkStatus} />
+        <PrivateRoute path="/team-information" component={Team} />
+        <PrivateRoute path="/deployment-view" component={Deployment} />
+
 
         <PublicRoute path="/login" component={Login} exact />
         <PublicRoute path="/reset-password" component={ResetPassword} exact />

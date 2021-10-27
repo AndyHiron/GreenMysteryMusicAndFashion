@@ -1,14 +1,5 @@
-import * as i from 'types';
-export * from './users/list/types';
-export * from './users/detail/types';
-export * from './usersGroups/list/types';
-export * from './timeseries/types';
-
 export type ReduxState = {
-  users: i.UsersState;
-  user: i.UserState;
-  usersGroups: i.UsersGroupsState;
-  timeseries: any;
+  project: any;
 };
 
 export type Pagination = {
