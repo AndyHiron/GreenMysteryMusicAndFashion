@@ -3,10 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 export const Tab = styled(NavLink)`
   height: 48px;
-  margin: 0 8px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 5px 0;
   color: ${({ theme }) => theme.colors.gray};
   font-weight: 600;
   text-decoration: none;

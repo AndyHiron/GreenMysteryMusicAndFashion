@@ -4,6 +4,8 @@ import { Page } from 'modules/pageLayout';
 import { useSelector } from 'services/hooks';
 import { useHistory } from 'react-router-dom';
 
+import TeamImage from 'vectors/team.svg';
+
 const Team: React.FC = () => {
   const history = useHistory();
   const project = useSelector(state => state.project.data);
@@ -12,9 +14,7 @@ const Team: React.FC = () => {
   return (
     <Page title="Team">
       {project ? (
-        <p>
-          {project.summary}
-        </p>
+        <TeamImage />
       ) : (
         <>
           <p>You haven't selected a project</p>
