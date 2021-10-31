@@ -71,18 +71,70 @@ const tabs = [
     label: 'Project summary'
   },
   {
-    to: '/work-status/graph',
+    to: '/work-status/milestones',
     exact: false,
-    label: 'Project graph '
+    label: 'Project milestones '
+  },  
+  {
+    to: '/work-status/risksandissues',
+    exact: false,
+    label: 'Risks and Issues '
+  },  
+  {
+    to: '/work-status/dependencies',
+    exact: false,
+    label: 'Dependencies '
+  },
+  {
+    to: '/work-status/sprint',
+    exact: false,
+    label: 'Current sprint '
   }
 ]
 
-const WorkStatusSummary: React.FC = () => {
+const WorkMilestonesPlaceholder: React.FC = () => {
   return (
     <div>
-      <div>summary bla bla bla</div>
-      <div>summary bla bla bla</div>
-      <div>summary bla bla bla</div>
+      <div></div>
+      <div>This is where the milestones image will go</div>
+      <div></div>
+    </div>
+  )
+}
+const WorkRisksAndIssuesPlaceholder: React.FC = () => {
+  return (
+    <div>
+      <div>Risks and Issues</div>
+      <div></div>
+      <div>Risks</div>
+      <div></div>
+      <div>ID  Title  Description  Risk Likelihood  Risk Severity  Assignee  Action</div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div>Issues</div>
+      <div></div>
+      <div>ID  Title  Description  Impact</div>
+      <div></div>
+    </div>
+  )
+}
+const WorkDependenciesPlaceholder: React.FC = () => {
+  return (
+    <div>
+      <div>Dependencies</div>
+      <table>
+        <tr><td>ID</td><td>Title</td><td>Description</td></tr>
+      </table>
+    </div>
+  )
+}
+const WorkCurrentSprint: React.FC = () => {
+  return (
+    <div>
+      <div></div>
+      <div>This is where the current sprint - kanban - image will go</div>
+      <div></div>
     </div>
   )
 }
@@ -106,8 +158,23 @@ const WorkStatus: React.FC = () => {
               exact
             />
             <Route
-              path={`${match.path}/graph`}
-              component={WorkStatusSummary}
+              path={`${match.path}/milestones`}
+              component={WorkMilestonesPlaceholder}
+              exact
+            />
+            <Route
+              path={`${match.path}/risksandissues`}
+              component={WorkRisksAndIssuesPlaceholder}
+              exact
+            />
+            <Route
+              path={`${match.path}/dependencies`}
+              component={WorkDependenciesPlaceholder}
+              exact
+            />
+            <Route
+              path={`${match.path}/sprint`}
+              component={WorkCurrentSprint}
               exact
             />
           </Switch>
