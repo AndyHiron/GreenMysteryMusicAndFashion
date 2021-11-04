@@ -7,7 +7,6 @@ import UserIcon from 'vectors/user.svg';
 export const MainMenu: React.FC = () => {
   const project = useSelector(state => state.project.data);
 
-  console.log(project)
   return (
     <MenuContainer>
       <MenuItem to="/" title="Projects Overview" icon={null} exact />

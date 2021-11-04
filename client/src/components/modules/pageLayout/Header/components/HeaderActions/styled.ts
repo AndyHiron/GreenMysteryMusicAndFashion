@@ -7,6 +7,8 @@ import { hexToRgba } from 'services/style';
 export const HeaderActionsContainer = styled.div`
   position: relative;
   z-index: 1;
+  display: flex;
+  
 `;
 
 export const HeaderActionsButton = styled(Button)`

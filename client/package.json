@@ -1,10 +1,9 @@
 {
-  "name": "dashboard-next",
+  "name": "cloud-inspector",
   "version": "0.0.8",
-  "description": "A starter kit to create dashboards for managers",
+  "description": "Tool to manage cloud deployments",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/react-prime/react-prime"
+    "type": "git"
   },
   "license": "MIT",
   "scripts": {

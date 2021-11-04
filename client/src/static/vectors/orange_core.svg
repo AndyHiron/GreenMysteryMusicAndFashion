@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
-<svg width="1009" height="179">
-<path style="fill:#ffffff; stroke:none;" d="M0 0L0 179L1009 179L1009 0L0 0z"/>
+<svg height="40" viewBox="100 5 861.7 220" width="2500">
+<path style="fill:#F4F5F2; stroke:none;" d="M0 0L0 179L1009 179L1009 0L0 0z"/>
 <path style="fill:#febb79; stroke:none;" d="M59 4L59 5L75 5L59 4z"/>
 <path style="fill:#fda146; stroke:none;" d="M53 5L53 6L57 6L53 5z"/>
 <path style="fill:#fc8004; stroke:none;" d="M57 5.42824C18.8459 10.8918 9 43.1944 9 77C9 93.916 11.917 113.167 24.1736 125.91C37.1874 139.44 59.0532 142.607 77 139.675C113.595 133.696 123 100.101 123 68C123 52.8664 121.027 36.4012 111.471 24C98.6185 7.32098 77.0753 2.55353 57 5.42824z"/>
@@ -10,7 +10,7 @@
 <path style="fill:#fdc184; stroke:none;" d="M83.6667 6.33333L84.3333 6.66667L83.6667 6.33333z"/>
 <path style="fill:#fec287; stroke:none;" d="M708 6L708 7L711 7L708 6z"/>
 <path style="fill:#fdc995; stroke:none;" d="M59 19L59 20L73 20L59 19z"/>
-<path style="fill:#ffffff; stroke:none;" d="M55 20.598C31.9215 26.145 26 49.2972 26 70C26 95.6654 31.3126 124.619 63 124.996C68.0843 125.057 73.0323 124.972 78 123.761C99.0868 118.619 105.993 96.3314 106 77C106.01 50.2607 101.33 20.1615 68 20.0008C63.726 19.9801 59.1852 19.5921 55 20.598z"/>
+<path style="fill:#F4F5F2; stroke:none;" d="M55 20.598C31.9215 26.145 26 49.2972 26 70C26 95.6654 31.3126 124.619 63 124.996C68.0843 125.057 73.0323 124.972 78 123.761C99.0868 118.619 105.993 96.3314 106 77C106.01 50.2607 101.33 20.1615 68 20.0008C63.726 19.9801 59.1852 19.5921 55 20.598z"/>
 <path style="fill:#fdd1a5; stroke:none;" d="M75 20L75 21L78 21L75 20z"/>
 <path style="fill:#fec68e; stroke:none;" d="M687 20L687 21L690 21L687 20z"/>
 <path style="fill:#fece9f; stroke:none;" d="M51.6667 21.3333L52.3333 21.6667L51.6667 21.3333z"/>

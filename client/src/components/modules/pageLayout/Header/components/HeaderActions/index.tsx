@@ -1,6 +1,8 @@
 import * as i from 'types';
 import React from 'react';
 
+import { Button } from 'common/interaction';
+
 import {
   HeaderActionsContainer,
   HeaderActionsButton,
@@ -14,26 +16,23 @@ export const HeaderActions: React.FC<HeaderActionsProps> = ({ actions }) => {
 
   return (
     <HeaderActionsContainer>
-      <HeaderActionsButton
-        onClick={() => setIsOpen(!isOpen)}
-        icon={<DotsIcon />}
-        variant="secondary"
-      />
-      {isOpen && (
-        <HeaderActionsDropdown>
-          {actions.map((action) => (
-            <HeaderActionsDropdownButton
-              onClick={() => {
-                if (action.onClick) action.onClick();
-                setIsOpen(false);
-              }}
-              key={action.label}
-            >
-              {action.label}
-            </HeaderActionsDropdownButton>
-          ))}
-        </HeaderActionsDropdown>
-      )}
+      {actions.map(action => {
+        return (
+          <Button
+            onClick={action.onClick}
+            type={action.type || 'button'}
+            isLoading={action.isLoading}
+            disabled={action.isDisabled}
+            form={action.form}
+            icon={action.icon}
+            iconPosition="right"
+            iconOnlyOnMobile
+        >
+          {action.label}
+        </Button>
+        )
+
+      })}
     </HeaderActionsContainer>
   );
 };

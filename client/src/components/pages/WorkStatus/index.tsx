@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Switch, Route, useRouteMatch, useParams } from 'react-router-dom';
-
-import { Page } from 'modules/pageLayout';
-import { useSelector } from 'services/hooks';
 import { useHistory } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
 
 import { TabGroup } from 'common/interaction'
+import { useSelector } from 'services/hooks';
+import { Page } from 'modules/pageLayout';
+import MilestoneSvg from 'vectors/milestones.svg';
+import KanbanSvg from 'vectors/kanban.svg';
+
 
 interface ChartProps {
   num: number
@@ -92,11 +94,17 @@ const tabs = [
   }
 ]
 
+const WorkMilestonesContainer = styled.div`
+  margin: 200px 0;
+`;
+
 const WorkMilestonesPlaceholder: React.FC = () => {
   return (
     <div>
       <div></div>
-      <div>This is where the milestones image will go</div>
+      <WorkMilestonesContainer>
+        <MilestoneSvg />
+      </WorkMilestonesContainer>
       <div></div>
     </div>
   )
@@ -129,11 +137,15 @@ const WorkDependenciesPlaceholder: React.FC = () => {
     </div>
   )
 }
+
+
 const WorkCurrentSprint: React.FC = () => {
   return (
     <div>
       <div></div>
-      <div>This is where the current sprint - kanban - image will go</div>
+      <div>
+        <KanbanSvg />
+      </div>
       <div></div>
     </div>
   )
@@ -145,12 +157,8 @@ const WorkStatus: React.FC = () => {
   const match = useRouteMatch();
 
   return (
-    <Page title="WorkStatus">
+    <Page title="WorkStatus" headerTabs={tabs}>
       {project ? (
-        <WorkStatusContainer>
-          <TabsContainer>
-            <TabGroup tabs={tabs} />
-          </TabsContainer>
           <Switch>
             <Route
               path={match.path}
@@ -178,8 +186,6 @@ const WorkStatus: React.FC = () => {
               exact
             />
           </Switch>
-         
-        </WorkStatusContainer>
       ) : (
         <>
           <p>You haven't selected a project</p>

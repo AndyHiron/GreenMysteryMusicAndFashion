@@ -20,7 +20,7 @@ export const HeaderContainer = styled.div<HeaderContainerProps>`
     padding: 0 24px;
     height: ${({ hasTabs }) => hasTabs ? '128px' : '96px'};
   `}
-
+  
   ${media.large`
     margin-left: 280px;
   `}

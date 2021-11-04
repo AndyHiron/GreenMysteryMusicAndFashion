@@ -4,7 +4,7 @@ import { Page } from 'modules/pageLayout';
 import { useSelector } from 'services/hooks';
 import { useHistory } from 'react-router-dom';
 
-import TeamImage from 'vectors/team.svg';
+import TeamImage from 'vectors/team_new.svg';
 
 const Team: React.FC = () => {
   const history = useHistory();

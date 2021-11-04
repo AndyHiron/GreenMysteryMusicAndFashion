@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import LogoIcon from 'vectors/logo.svg';
+import LogoIcon from 'vectors/orange_core.svg';
 import LogoSmallIcon from 'vectors/logo-small.svg';
 import { media } from 'styles/utils';
 
@@ -13,7 +13,7 @@ export const SidebarContainer = styled.div<SidebarContainerProps>`
   right: 0;
   padding: 40px 16px 24px 16px;
   background-color: ${({ theme }) => theme.colors.white.dark};
-  z-index: 1;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   display: none;
