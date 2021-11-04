@@ -62,14 +62,14 @@ const Deployment: React.FC = () => {
 
   const actions = [
     {
-      label: 'Azure arc',
+      label: 'Azure Arc',
       icon: <CheckmarkIcon />,
       onClick: () => {
         window.open(project.arcUrl, "_blank", 'noopener,noreferrer')?.focus();
       },
     },
     {
-      label: 'Azure portal',
+      label: 'Native cloud portal',
       icon: <SearchIcon />,
       onClick: () => {
         window.open(project.portalUrl, "_blank", 'noopener,noreferrer')?.focus();

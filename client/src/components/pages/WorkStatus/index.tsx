@@ -70,13 +70,13 @@ const tabs = [
   {
     to: '/work-status',
     exact: true,
-    label: 'Project summary'
-  },
-  {
-    to: '/work-status/milestones',
-    exact: false,
     label: 'Project milestones '
   },  
+  {
+    to: '/work-status/spend',
+    exact: false,
+    label: 'Project spend'
+  },
   {
     to: '/work-status/risksandissues',
     exact: false,
@@ -162,12 +162,12 @@ const WorkStatus: React.FC = () => {
           <Switch>
             <Route
               path={match.path}
-              component={Chart}
+              component={WorkMilestonesPlaceholder}
               exact
             />
             <Route
-              path={`${match.path}/milestones`}
-              component={WorkMilestonesPlaceholder}
+             path={`${match.path}/spend`}
+             component={Chart}
               exact
             />
             <Route
